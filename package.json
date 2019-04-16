@@ -9,7 +9,7 @@
     "prelink": "npm run build",
     "lint": "eslint --max-warnings=0 .",
     "patch": "npm --no-git-tag-version version patch",
-    "postpatch": "git add package.json && git commit -m \"Bump version patch number\" package.*",
+    "postpatch": "git add package.json && git commit -m \"Bump version patch number\" package*",
     "test": "mocha --recursive src/test"
   },
   "keywords": [
