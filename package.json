@@ -1,6 +1,6 @@
 {
   "name": "easy-errors",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "This is a package for validating an object for presence of mandatory attributes. It also provides some errors you can use.",
   "main": "dist/index.js",
   "scripts": {
@@ -10,7 +10,8 @@
     "lint": "eslint --max-warnings=0 .",
     "patch": "npm --no-git-tag-version version patch",
     "postpatch": "git add package.json && git commit -m \"Bump version patch number\" package*",
-    "test": "mocha --recursive src/test"
+    "test": "mocha --recursive src/test",
+    "deploy": "git flow release start $npm_package_version && git flow release finish -m \"$npm_package_version\" $npm_package_version && npm publish"
   },
   "keywords": [
     "easy",
