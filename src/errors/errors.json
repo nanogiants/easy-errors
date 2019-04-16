@@ -1,0 +1,14 @@
+[
+  {
+    "name": "MissingParametersError",
+    "code": 10000,
+    "message": "Some parameters are missing",
+    "statusCode": 400
+  },
+  {
+    "name": "InvalidParametersError",
+    "code": 10001,
+    "message": "Some parameters are invalid",
+    "statusCode": 400
+  }
+]
