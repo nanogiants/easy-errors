@@ -5,13 +5,13 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "babel src --presets babel-preset-es2015 --copy-files --out-dir dist",
+    "publish": "git flow release start $npm_package_version && git flow release finish -m \"$npm_package_version\" $npm_package_version && npm publish && git push origin master",
     "prepublish": "npm run build",
     "prelink": "npm run build",
     "lint": "eslint --max-warnings=0 .",
     "patch": "npm --no-git-tag-version version patch",
     "postpatch": "git add package.json && git commit -m \"Bump version patch number\" package*",
-    "test": "mocha --recursive src/test",
-    "deploy": "git flow release start $npm_package_version && git flow release finish -m \"$npm_package_version\" $npm_package_version && npm publish"
+    "test": "mocha --recursive src/test"
   },
   "keywords": [
     "easy",
