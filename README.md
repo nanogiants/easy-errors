@@ -1,7 +1,6 @@
 # easy-errors
 
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![npm version](https://badge.fury.io/js/eslint-config-appcom.svg)](https://badge.fury.io/js/eslint-config-appcom)
+![npm](https://img.shields.io/npm/v/easy-errors.svg)
 
 This is a package for validating an object for presence of mandatory attributes. 
 It also provides some errors you can use.
