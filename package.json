@@ -2,9 +2,15 @@
   "name": "easy-errors",
   "version": "1.0.0",
   "description": "This is a package for validating an object for presence of mandatory attributes. It also provides some errors you can use.",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel src --presets babel-preset-es2015 --copy-files --out-dir dist",
+    "prepublish": "npm run build",
+    "prelink": "npm run build",
+    "lint": "eslint --max-warnings=0 .",
+    "patch": "npm --no-git-tag-version version patch",
+    "postpatch": "git add package.json && git commit -m \"Bump version patch number\" package.*",
+    "test": "mocha --recursive test"
   },
   "keywords": [
     "easy",
@@ -13,5 +19,16 @@
     "validator"
   ],
   "author": "Stefan Neidig <s.neidig@appcom-interactive.de>",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "eslint-config-appcom": "^1.0.9",
+    "faker": "^4.1.0",
+    "mocha": "^6.1.3",
+    "sinon": "^7.3.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1"
+  }
 }
