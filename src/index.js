@@ -3,4 +3,10 @@
  * Copyright © 2019 appcom interactive GmbH. All rights reserved.
  */
 
-module.exports = () => console.log("Hello");
+const validation = require('./validation');
+const errors = require('./errors');
+
+module.exports = {
+  validation,
+  errors
+};
