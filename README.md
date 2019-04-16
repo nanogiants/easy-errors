@@ -10,20 +10,47 @@ It also provides some errors you can use.
 `npm install easy-errors`
 
 ## Usage
+### Validation
+When you provide data in form of an object for an interface (e.g. method, http interface, ...) you sometimes rely 
+on attributes that have to be present. There is a validation method, which does exactly that.
 
-    const { validation, errors } = require('easy-errors');
+    const { validation } = require('easy-errors');
     
-    # validation
     try {
+      // call validation method. First parameter is the data, which should be tested. Second parameter is a 
+      // list of attributes, which must be set in the data object (i.e. first parameter). If validation succeeds
+      // the promise resolves without a value. If not it rejects with a MissingParametersError.
+      
       await validation({ key: 10 }, ['key', 'test']);
+      
+      // [...] 
     } catch(error) {
       console.error(error);
-      # -> MissingAttributesError: test is missing
+      # -> MissingAttributesError: 'test' is missing
     }
+
+### Errors
+When propagating errors you often want some meta data attached to it (e.g. code, message, ...). Maintaining this is 
+cumbersome and should be done descriptively. This package introduces common errors with useful meta information 
+attached to it that you can use. Also the validation method uses them as well!
     
-    # errors
+    const { errors } = require('easy-errors');
+    throw new errors.MissingParametersError();
     
-    throw new errors.MissingParametersError({ detail: ['There is something wrong']);
+You can be provide an object with more meta data, which will be added to the error.    
+        
+    const { errors } = require('easy-errors');
+    throw new errors.MissingParametersError({ detail: ['There is something wrong'], success: false });
+    
+See a full list of the introduced errors:
+
+| Name | Message | Code | Status Code | 
+|:-|:-|:-|:-|
+| MissingParametersError | Some parameters are missing | 10000 | 400 |
+| InvalidParametersError | Some parameters are invalid | 10001 | 400 |
+
+The Status Code is a value, which is a recommendation as a response status, when dealing with HTTP/S. The Code is something
+to identify the error by. 
 
 ## License
 
