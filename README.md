@@ -48,6 +48,9 @@ See a full list of the introduced errors:
 |:-|:-|:-|:-|
 | MissingParametersError | Some parameters are missing | 10000 | 400 |
 | InvalidParametersError | Some parameters are invalid | 10001 | 400 |
+| NotFoundError | The requested resources was not found | 10002 | 404 |
+| ForbiddenError  | You are not allowed to perform this action | 10003 | 403 |
+| UnauthorizedError | There was an error with the authorization | 10004 | 401 |
 
 The Status Code is a value, which is a recommendation as a response status, when dealing with HTTP/S. The Code is something
 to identify the error by. 
