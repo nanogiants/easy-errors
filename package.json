@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "babel src --presets babel-preset-es2015 --copy-files --out-dir dist",
-    "publish": "git flow release start $npm_package_version && git flow release finish -m \"$npm_package_version\" $npm_package_version && npm publish && git push origin master",
+    "deploy": "git flow release start $npm_package_version && git flow release finish -m \"$npm_package_version\" $npm_package_version && npm publish && git push origin master",
     "prepublish": "npm run build",
     "prelink": "npm run build",
     "lint": "eslint --max-warnings=0 .",
