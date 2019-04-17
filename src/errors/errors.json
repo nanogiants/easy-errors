@@ -10,5 +10,23 @@
     "code": 10001,
     "message": "Some parameters are invalid",
     "statusCode": 400
+  },
+  {
+    "name": "NotFoundError",
+    "code": 10002,
+    "message": "The requested resources was not found",
+    "statusCode": 404
+  },
+  {
+    "name": "ForbiddenError",
+    "code": 10003,
+    "message": "You are not allowed to perform this action",
+    "statusCode": 403
+  },
+  {
+    "name": "UnauthorizedError",
+    "code": 10004,
+    "message": "There was an error with the authorization",
+    "statusCode": 401
   }
 ]
