@@ -3,7 +3,6 @@
  */
 
 const SuperError = require('super-error');
-const lodash = require('lodash');
 const fs = require('fs');
 const path = require('path');
 
@@ -12,14 +11,14 @@ const json = JSON.parse(content);
 
 json.forEach((error) => {
   SuperError.subclass(exports, error.name, function constructor(payload) {
-    const propagateAttribute = (value, key) => {
-      this[key] = value;
-    };
-
-    lodash.mapKeys(error, propagateAttribute);
+    Object.keys(error).forEach((key) => {
+      this[key] = error[key];
+    });
 
     if (payload) {
-      lodash.mapKeys(payload, propagateAttribute);
+      Object.keys(payload).forEach((key) => {
+        this[key] = payload[key];
+      });
     }
   });
 });
