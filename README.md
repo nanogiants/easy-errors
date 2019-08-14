@@ -51,6 +51,10 @@ See a full list of the introduced errors:
 | NotFoundError | The requested resources was not found | 10002 | 404 |
 | ForbiddenError  | You are not allowed to perform this action | 10003 | 403 |
 | UnauthorizedError | There was an error with the authorization | 10004 | 401 |
+| ConfigurationError | There was an configuration error | 10005 | 500 |  
+| TopicNotFoundError | The requested topic is not available or was not found | 10006 | 404 |  
+| SubscriptionError | The device could not be subscribed to the topic | 10007 | 500 |  
+| EndpointNotFoundError | The requested endpoint is not available or was not found | 10008 | 404 |  
 
 The Status Code is a value, which is a recommendation as a response status, when dealing with HTTP/S. The Code is something
 to identify the error by. 
