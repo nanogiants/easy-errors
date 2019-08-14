@@ -28,5 +28,29 @@
     "code": 10004,
     "message": "There was an error with the authorization",
     "statusCode": 401
+  },
+  {
+    "name": "ConfigurationError",
+    "code": 10005,
+    "message": "There was an configuration error",
+    "statusCode": 500
+  },
+  {
+    "name": "TopicNotFoundError",
+    "code": 10006,
+    "message": "The requested topic is not available or was not found",
+    "statusCode": 404
+  },
+  {
+    "name": "SubscriptionError",
+    "code": 10007,
+    "message": "The device could not be subscribed to the topic",
+    "statusCode": 500
+  },
+  {
+    "name": "EndpointNotFoundError",
+    "code": 10008,
+    "message": "The requested endpoint is not available or was not found",
+    "statusCode": 404
   }
 ]
