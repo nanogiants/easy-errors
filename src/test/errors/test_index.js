@@ -66,3 +66,100 @@ describe('InvalidParametersError', () => {
     done();
   })
 });
+
+describe('ConfigurationError', () => {
+  let error;
+
+  before((done) => {
+    error = new errors.ConfigurationError();
+    done();
+  });
+
+  it('should exist', (done) => {
+    expect(error).to.exist;
+    done();
+  });
+
+  it('should have the correct code', (done) => {
+    expect(error.statusCode).to.eq(500);
+    done();
+  });
+
+  it('should have the correct http status code', (done) => {
+    expect(error.message).to.eq('There was an configuration error');
+    done();
+  });
+});
+
+describe('TopicNotFoundError', () => {
+  let error;
+
+  before((done) => {
+    error = new errors.TopicNotFoundError();
+    done();
+  });
+
+  it('should exist', (done) => {
+    expect(error).to.exist;
+    done();
+  });
+
+  it('should have the correct code', (done) => {
+    expect(error.statusCode).to.eq(404);
+    done();
+  });
+
+  it('should have the correct http status code', (done) => {
+    expect(error.message).to.eq('The requested topic is not available or was not found');
+    done();
+  });
+});
+
+describe('SubscriptionError', () => {
+  let error;
+
+  before((done) => {
+    error = new errors.SubscriptionError();
+    done();
+  });
+
+  it('should exist', (done) => {
+    expect(error).to.exist;
+    done();
+  });
+
+  it('should have the correct code', (done) => {
+    expect(error.statusCode).to.eq(500);
+    done();
+  });
+
+  it('should have the correct http status code', (done) => {
+    expect(error.message).to.eq('The device could not be subscribed to the topic');
+    done();
+  });
+});
+
+describe('EndpointNotFoundError', () => {
+  let error;
+
+  before((done) => {
+    error = new errors.EndpointNotFoundError();
+    done();
+  });
+
+  it('should exist', (done) => {
+    expect(error).to.exist;
+    done();
+  });
+
+  it('should have the correct code', (done) => {
+    expect(error.statusCode).to.eq(404);
+    done();
+  });
+
+  it('should have the correct http status code', (done) => {
+    expect(error.message).to.eq('The requested endpoint is not available or was not found');
+    done();
+  });
+});
+
