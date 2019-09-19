@@ -1,6 +1,6 @@
 {
   "name": "easy-errors",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "This is a package for validating an object for presence of mandatory attributes. It also provides some errors you can use.",
   "main": "dist/index.js",
   "scripts": {
