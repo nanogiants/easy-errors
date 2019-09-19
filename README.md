@@ -55,6 +55,7 @@ See a full list of the introduced errors:
 | TopicNotFoundError | The requested topic is not available or was not found | 10006 | 404 |  
 | SubscriptionError | The device could not be subscribed to the topic | 10007 | 500 |  
 | EndpointNotFoundError | The requested endpoint is not available or was not found | 10008 | 404 |  
+| ConflictError | The request could not be completed due to a conflict with the current state of the target resource | 10009 | 409 |  
 
 The Status Code is a value, which is a recommendation as a response status, when dealing with HTTP/S. The Code is something
 to identify the error by. 

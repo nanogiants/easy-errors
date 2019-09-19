@@ -163,3 +163,27 @@ describe('EndpointNotFoundError', () => {
   });
 });
 
+describe('ConflictError', () => {
+  let error;
+
+  before((done) => {
+    error = new errors.ConflictError();
+    done();
+  });
+
+  it('should exist', (done) => {
+    expect(error).to.exist;
+    done();
+  });
+
+  it('should have the correct code', (done) => {
+    expect(error.statusCode).to.eq(409);
+    done();
+  });
+
+  it('should have the correct http status code', (done) => {
+    expect(error.message).to.eq('The request could not be completed due to a conflict with the current state of the target resource');
+    done();
+  });
+});
+

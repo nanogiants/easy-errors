@@ -52,5 +52,11 @@
     "code": 10008,
     "message": "The requested endpoint is not available or was not found",
     "statusCode": 404
+  },
+  {
+    "name": "ConflictError",
+    "code": 10009,
+    "message": "The request could not be completed due to a conflict with the current state of the target resource",
+    "statusCode": 409
   }
 ]
