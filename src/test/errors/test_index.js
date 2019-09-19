@@ -187,3 +187,60 @@ describe('ConflictError', () => {
   });
 });
 
+describe('DecodingError', () => {
+  let error;
+
+  before((done) => {
+    error = new errors.DecodingError();
+    done();
+  });
+
+  it('should exist', (done) => {
+    expect(error).to.exist;
+    done();
+  });
+
+  it('should hhave the correct code', (done) => {
+    expect(error.code).to.eq(10010);
+    done();
+  });
+
+  it('should have the correct http status code', (done) => {
+    expect(error.statusCode).to.eq(401);
+    done();
+  });
+
+  it('should have the correct message', (done) => {
+    expect(error.message).to.eq('Signature mismatch');
+    done();
+  });
+});
+
+describe('TokenExpirationError', () => {
+  let error;
+
+  before((done) => {
+    error = new errors.TokenExpirationError();
+    done();
+  });
+
+  it('should exist', (done) => {
+    expect(error).to.exist;
+    done();
+  });
+
+  it('should hhave the correct code', (done) => {
+    expect(error.code).to.eq(10011);
+    done();
+  });
+
+  it('should have the correct http status code', (done) => {
+    expect(error.statusCode).to.eq(401);
+    done();
+  });
+
+  it('should have the correct message', (done) => {
+    expect(error.message).to.eq('JWT Token lifetime has expired');
+    done();
+  });
+});
