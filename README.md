@@ -2,8 +2,8 @@
 
 ![npm](https://img.shields.io/npm/v/easy-errors.svg)
 
-This is a package for validating an object for presence of mandatory attributes. 
-It also provides some errors you can use.
+This packages offeres often used tasks for validating given input for interfaces. You can validate input and expect
+mandatory attributes. You may also secure input by encoding it for HTML and avoid XSS attacks.
 
 ## Installation
 
@@ -61,6 +61,14 @@ See a full list of the introduced errors:
 
 The Status Code is a value, which is a recommendation as a response status, when dealing with HTTP/S. The Code is something
 to identify the error by. 
+
+### Secure 
+You can encode input for HTML and thus avoid XSS attacks.
+
+    const { secure } = require('easy-errors');
+    const xssAttack = '<script>alert("DANGER")</script>'
+    
+    secure.encodeString(xssAttack); // -> &lt;script>alert("DANGER")&lt;/script>
 
 ## License
 
