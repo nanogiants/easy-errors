@@ -22,3 +22,11 @@ describe('errors', () => {
     expect(index.errors).to.be.an('object');
   });
 });
+
+describe('secure', () => {
+  it('should expose the secure', () => {
+    expect(index.secure).to.exist;
+    expect(index.secure.encodeString).to.exist;
+    expect(index.secure.encodeString).to.be.a('function');
+  });
+});

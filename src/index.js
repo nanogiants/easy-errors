@@ -5,8 +5,10 @@
 
 const validation = require('./validation');
 const errors = require('./errors');
+const secure = require('./secure');
 
 module.exports = {
   validation,
-  errors
+  errors,
+  secure
 };

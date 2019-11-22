@@ -22,7 +22,8 @@
   "author": "Stefan Neidig <s.neidig@appcom-interactive.de>",
   "license": "ISC",
   "dependencies": {
-    "super-error": "^2.2.1"
+    "super-error": "^2.2.1",
+    "xss-filters": "^1.2.7"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
