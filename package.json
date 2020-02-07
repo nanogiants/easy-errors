@@ -1,6 +1,6 @@
 {
   "name": "easy-errors",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "This is a package for validating an object for presence of mandatory attributes. It also provides some errors you can use.",
   "main": "dist/index.js",
   "scripts": {
@@ -19,7 +19,7 @@
     "validation",
     "validator"
   ],
-  "author": "Stefan Neidig <s.neidig@appcom-interactive.de>",
+  "author": "Stefan Neidig <s.neidig@nanogiants.de>",
   "license": "ISC",
   "dependencies": {
     "super-error": "^2.2.1",
@@ -30,7 +30,7 @@
     "babel-preset-es2015": "^6.24.1",
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
-    "eslint-config-appcom": "^1.0.9",
+    "eslint-config-nanogiants": "^1.0.10",
     "faker": "^4.1.0",
     "lodash": "^4.17.15",
     "mocha": "^6.2.0",
@@ -38,6 +38,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/appcom-interactive/easy-errors"
+    "url": "https://github.com/nanogiants/easy-errors"
   }
 }
