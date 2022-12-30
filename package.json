@@ -34,7 +34,7 @@
     "eslint-config-nanogiants": "^1.0.10",
     "faker": "^4.1.0",
     "lodash": "^4.17.15",
-    "mocha": "^6.2.0",
+    "mocha": "^10.2.0",
     "sinon": "^7.3.1"
   },
   "repository": {
